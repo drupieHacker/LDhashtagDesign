@@ -1,0 +1,164 @@
+
+nav {
+display: flex;
+background: #ffffff;
+  width:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+nav ul li{
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color:#D60B52;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+nav ul li a:hover{
+  transition: all 0.5s;
+  color: #ffffff;
+  background: #000000;
+}
+nav ul li a:not(:only-child):after{
+  padding-left: 5px;
+  content: ' ▾';
+}
+.nav-submenu{
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.nav-submenu li {
+  width: 100%;
+  white-space: nowrap;
+}
+
+
+.nav-movil {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  height: 80px;
+  width: 100%;
+}
+#nav-boton{
+  
+  cursor: pointer;
+  width: 20px;
+  height: 10px;
+  padding: 5px 5px 5px 0;
+
+  z-index: 1;
+}
+#nav-boton span,
+#nav-boton span:after,
+#nav-boton span:before {
+transition: all 500ms ease-in-out;
+border-radius: 1px;
+height: 5px;
+width: 40px;
+position: absolute;
+display: block;
+content: "";
+background: #000;
+}
+#nav-boton span::before{
+  top:-10px;
+
+}
+#nav-boton span::after{
+  bottom: -10px;
+}
+
+#nav-boton.activo span {
+  background-color: transparent;
+}
+#nav-boton.activo span:before,
+#nav-boton.activo span:after {
+  top: 0;
+}
+
+#nav-boton.activo span:after {
+  transform: rotate(-45deg);
+}
+
+#nav-boton.activo span:before {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width:979px) {
+  nav{
+    display: block;
+  }
+  .logo{
+    display: none;
+    
+  }
+  .logo_bar{
+ 
+  }
+  .nav-movil {
+   
+      display: flex;
+      justify-content: space-around;
+     align-items: center;
+    }
+    #nav-boton{
+  
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      padding: 5px 5px 5px 0;
+    display: block;
+      z-index: 1;
+     
+    
+    }
+    .nav-menu {
+      display: none;
+      margin-top: 70px;
+    }
+    
+    .nav-menu li {
+      float: none;
+    }
+    .nav-menu li a {
+      padding: 20px;
+      line-height: 20px;
+    }
+    .nav-menu li ul li a {
+      padding-left: 30px;
+    }
+    
+    .nav-submenu {
+      position: static;
+    }
+  
+}
+
+/* tablet */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+}

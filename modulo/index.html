@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Realizar presupuesto</h1>
+    <div class="form">
+        <label for="">Seleccione un servicio/producto</label>
+        <select name="servicio" id="servicio">
+            <option value="tp">Tarjetas de presentación</option>
+            <option value="cc">Tazas personalizadas</option>
+            <option value="tc">Playeras personalizadas</option>
+          
+        </select>
+        
+        <label for="">Unidades</label>
+      
+        <select name="Unidades" id="unidades">
+            <option value="100">100</option>
+            <option value="1000">1000</option>
+        </select>
+        <label for="">Total</label>
+        <input type="text" id="total" placeholder="total">
+       
+    <button id="btn">Calcular</button>
+    </div>
+</body>
+<script>
+    var servicio=document.getElementById('servicio');
+    var unidades=document.getElementById('unidades');
+    var total=document.getElementById('total');
+    var btn=document.getElementById('btn');
+    function Calcular(){
+
+if(servicio.value=="tp"){
+  if(unidades.value=="100"){
+
+var pieza=50;
+var cantidad=100;
+var t=pieza*cantidad;
+total.value=t;
+  }else if(unidades.value=="1000"){
+    var pieza=50;
+var cantidad=1000;
+var t=pieza*cantidad;
+total.value=t;  
+  }
+}
+if(servicio.value=="cc"){
+    if(unidades.value=="100"){
+
+var pieza=35;
+var cantidad=100;
+var t=pieza*cantidad;
+total.value=t;
+  }else if(unidades.value=="1000"){
+    var pieza=30;
+var cantidad=1000;
+var t=pieza*cantidad;
+total.value=t;  
+  }
+}
+
+if(servicio.value=="tc"){
+    if(unidades.value=="100"){
+
+var pieza=25;
+var cantidad=100;
+var t=pieza*cantidad;
+total.value=t;
+  }else if(unidades.value=="1000"){
+    var pieza=20;
+var cantidad=1000;
+var t=pieza*cantidad;
+total.value=t;  
+  }
+}
+
+    }
+    
+    btn.addEventListener("click",Calcular);
+
+</script>
+<div class="img">
+    <img src="lap.jpg" alt="">
+</div>
+</html>
